@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>🛒 Create Order</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+```
+<h3>Customer Info</h3>
+{{ order_form.as_p }}
+
+<h3>Order Details</h3>
+{{ item_form.as_p }}
+
+<button type="submit">Save Order</button>
+```
+
+</form>
+
+{% endblock %}
