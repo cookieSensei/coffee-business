@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Coffee Dashboard</title>
+
+```
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f6f8;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 220px;
+        height: 100vh;
+        background: #2d3436;
+        color: white;
+        position: fixed;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        color: #00cec9;
+    }
+
+    .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        margin: 15px 0;
+    }
+
+    .sidebar a:hover {
+        color: #00cec9;
+    }
+
+    /* Main content */
+    .main {
+        margin-left: 240px;
+        padding: 20px;
+    }
+
+    /* Cards */
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 10px;
+        display: inline-block;
+        width: 250px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+        margin: 0 0 10px 0;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>☕ Coffee Admin</h2>
+
+    <a href="/">Dashboard</a>
+    <a href="/admin/">Admin Panel</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+    {% block content %}
+    {% endblock %}
+</div>
+```
+
+</body>
+</html>

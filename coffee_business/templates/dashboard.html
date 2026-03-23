@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>📊 Coffee Business Dashboard</h1>
+
+<!-- Summary Cards -->
+
+<div class="card">
+    <h3>💰 Total Sales</h3>
+    <p>₹ {{ sales }}</p>
+</div>
+
+<div class="card">
+    <h3>💸 Total Expenses</h3>
+    <p>₹ {{ expenses }}</p>
+</div>
+
+<div class="card">
+    <h3>📈 Profit</h3>
+    <p>₹ {{ profit }}</p>
+</div>
+
+<hr>
+
+<!-- Extra Info Section -->
+
+<h2>📦 Business Overview</h2>
+
+<div class="card">
+    <h3>📦 Inventory Items</h3>
+    <p>{{ total_items }}</p>
+</div>
+
+<div class="card">
+    <h3>🛒 Orders</h3>
+    <p>{{ total_orders }}</p>
+</div>
+
+<div class="card">
+    <h3>🔧 Repair Requests</h3>
+    <p>{{ total_repairs }}</p>
+</div>
+
+{% endblock %}
