@@ -1,0 +1,22 @@
+# Python
+
+**pycache**/
+*.pyc
+
+# Django
+
+db.sqlite3
+
+# Virtual environment
+
+coffee-env/
+env/
+venv/
+
+# VS Code
+
+.vscode/
+
+# OS files
+
+.DS_Store
