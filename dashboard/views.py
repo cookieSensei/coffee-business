@@ -6,8 +6,16 @@ from inventory.models import Item
 from repairs.models import RepairRequest
 
 def dashboard_view(request):
-    total_sales = OrderItem.objects.aggregate(Sum('price'))['price__sum'] or 0
-    total_expenses = Expense.objects.aggregate(Sum('amount'))['amount__sum'] or 0
+    try:
+        total_sales = OrderItem.objects.aggregate(Sum('price'))['price__sum'] or 0
+    except:
+        total_sales = 0
+
+    try:
+        total_expenses = Expense.objects.aggregate(Sum('amount'))['amount__sum'] or 0
+    except:
+        total_expenses = 0
+
     profit = total_sales - total_expenses
 
     total_items = Item.objects.count()
